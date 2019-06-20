@@ -23,20 +23,14 @@ const useStyles = makeStyles(theme => ({
 
 const MovieDialog = (props) => {
   const { onClose, moviedetail, open, errorMessage } = props;
-  //const [modalStyle] = React.useState();
-
   const classes = useStyles();
-
-  function handleClose() {
-    onClose();
-  }
 
   return (
     <Modal
       aria-labelledby="simple-modal-title"
       aria-describedby="simple-modal-description"
       open={open}
-      onClose={handleClose}
+      onClose={onClose}
     >
       {!errorMessage ?
         <div className={classes.paper}>

@@ -54,6 +54,7 @@ const Movie = ({ movie }) => {
   const handleClose = () => {
     setOpen(false);
   };
+  
   const { moviedetail, errorMessage } = state;
 
   return (
