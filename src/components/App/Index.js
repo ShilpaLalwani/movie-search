@@ -1,7 +1,7 @@
 import React, { useReducer, useEffect } from 'react';
 
 import './App.css';
-import Reducer from '../../Reducer';
+import MovieListReducer from '../../reducers/MovieListReducer';
 import Header from '../Header';
 import Movies from '../Movies';
 import spinner from '../../ajax-loader.gif';
@@ -16,7 +16,7 @@ const initialState = {
 };
 
 const App = () => {
-  const [state, dispatch] = useReducer(Reducer, initialState);
+  const [state, dispatch] = useReducer(MovieListReducer, initialState);
 
   useEffect(() => {
     fetch(MOVIE_API_URL)
